@@ -55,4 +55,11 @@ Apply,
 sudo sysctl -p
 ```
 
+| Scenario                       | Best Choice             |
+| ------------------------------ | ----------------------- |
+| Low latency, private network   | **TCP Vegas**           |
+| Public Internet, mixed traffic | **TCP Reno**            |
+| Compatibility & fairness       | **TCP Reno**            |
+| Research / controlled env      | **TCP Vegas**           |
+| Production servers today       | **Reno (or CUBIC/BBR)** |
 
