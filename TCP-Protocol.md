@@ -1,3 +1,10 @@
+Check TCP port connecting or not
+-----------------------------
+```
+echo > /dev/tcp/redis/6370 && echo "TCP OK" || echo "TCP FAIL"
+getent hosts redis || nslookup redis
+```
+
 TCP Congestion control:
 -----------------------
 TCP Vegas is a **congestion avoidance algorithm** that tries to **detect congestion early and prevent packet loss**, instead of reacting after packets are dropped (like **TCP Reno**).
