@@ -36,7 +36,9 @@ In Linux, there are 6 distinct stages in the typical booting process.
 
 - `BIOS` stands for **Basic Input/Output System**. the BIOS loads and executes the Master Boot Record (MBR) boot loader. <br>
 - When you turn on your computer, the `BIOS` first performs some integrity checks of the harddisk. Then, `BIOS` searches for, loads, and executes the boot loader program, which can be found in the Master Boot Record (MBR). The MBR is sometimes on a USB stick or CD-ROM such as with a live installation of Linux. <br>
-- Once the boot loader program is detected, it's then loaded into memory and the BIOS gives control of the system to it. <brr>
+- Once the boot loader program is detected, it's then loaded into memory and the BIOS gives control of the system to it. <br>
+<img width="484" height="364" alt="image" src="https://github.com/user-attachments/assets/98e2a716-44a2-4a1a-9a55-c536b9ec1b44" />
+
 
 ### 2. MBR
 - `MBR` stands for **Master Boot Record**, and is responsible for loading and executing the **GRUB boot loader**. <br>
