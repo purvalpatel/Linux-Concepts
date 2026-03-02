@@ -2,33 +2,33 @@ An operating system (OS) is the low-level software that manages resources, contr
 In Linux, there are 6 distinct stages in the typical booting process.
 ```
 ┌─────────────────────────────────────────────────┐
-│             1. BIOS / UEFI   -- > MBR            │
-│     (Power-on, hardware initialization)          │
+│             1. BIOS / UEFI   -- > MBR           │
+│     (Power-on, hardware initialization)         │
 └────────────────────┬────────────────────────────┘
                      ▼
 ┌─────────────────────────────────────────────────┐
-│           2. Boot Loader (GRUB)                   │
-│     (Loads kernel into memory)                    │
+│           2. Boot Loader (GRUB)                 │
+│     (Loads kernel into memory)                  │
 └────────────────────┬────────────────────────────┘
                      ▼
 ┌─────────────────────────────────────────────────┐
-│             3. Kernel Initialization              │
-│     (Mounts root filesystem)                      │
+│             3. Kernel Initialization            │
+│     (Mounts root filesystem)                    │
 └────────────────────┬────────────────────────────┘
                      ▼
 ┌─────────────────────────────────────────────────┐
-│             4. Init Process (PID 1)               │
-│     systemd / SysVinit / Upstart                  │
+│             4. Init Process (PID 1)             │
+│     systemd / SysVinit / Upstart                │
 └────────────────────┬────────────────────────────┘
                      ▼
 ┌─────────────────────────────────────────────────┐
-│           5. Runlevel / Target                    │
-│     (multi-user.target / graphical.target)        │
+│           5. Runlevel / Target                  │
+│     (multi-user.target / graphical.target)      │
 └────────────────────┬────────────────────────────┘
                      ▼
 ┌─────────────────────────────────────────────────┐
-│         6. User Space & Login Prompt              │
-│     (Shell, GUI, Applications)                    │
+│         6. User Space & Login Prompt            │
+│     (Shell, GUI, Applications)                  │
 └─────────────────────────────────────────────────┘
 ```
 
