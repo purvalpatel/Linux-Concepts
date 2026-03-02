@@ -1,0 +1,43 @@
+A file descriptor (FD) is simply a number that represents an open resource inside a process. <br>
+Not just files. <br>
+<br>
+**Any open I/O resource.**
+
+In Linux (and Unix in general), everything is treated like a file:
+- Regular files
+- Directories
+- Network sockets
+- Pipes
+- Terminals
+- Devices (/dev/nvidia0, /dev/sda)
+<bR>
+When a process opens something, the kernel returns a small integer. <br>
+<br>
+**That integer is the file descriptor.**
+
+### How to check used file descriptors by some process?
+1. Get the process id:
+```
+ps -ef | grep -i process-name
+## get total used file descriptors by some process
+ls -l /proc/178956/fd | wc -l
+```
+<img width="639" height="42" alt="image" src="https://github.com/user-attachments/assets/ff78a0cc-06b7-4563-899b-248ab24fbbb1" />
+
+### How to check limit:
+```
+ulimit -n
+```
+Default is : 1024
+
+### How to increase limit:
+For high-performance servers (NGINX, databases), this is increased.
+```
+ulimit -n 65535
+ulimit -Hn 65535
+ulimit -Sn 63335
+```
+
+If some process reached the limit then it will show error "**Too Many open files**". <br>
+This limit is temparary. or removed after reboot or logout.<br>
+In  Next session will talk about how to keep this permenenat..
