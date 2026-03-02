@@ -99,3 +99,4 @@ Run level 5 – /etc/rc5.d/
 Run level 6 – /etc/rc6.d/
 ```
 Note that the exact location of these directories varies from distribution to distribution.
+
