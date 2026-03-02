@@ -100,3 +100,7 @@ Run level 6 – /etc/rc6.d/
 ```
 Note that the exact location of these directories varies from distribution to distribution.
 
+### Quick command for Check boot time:
+```bash
+systemd-analyze blame  # Check boot time
+```
