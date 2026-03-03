@@ -1,5 +1,7 @@
 error : file /boot/initrd.img-3.10.12-generic' not found
 ---------------------------
+<img width="735" height="378" alt="image" src="https://github.com/user-attachments/assets/33566665-e3b5-4a0f-a000-837fdbfbf545" />
+
 
 if error found during booting system, follow the steps below:
 
